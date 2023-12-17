@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+       home: Scaffold(
+        body: Center(
+          child: Text(
+          ('Merhaba Mete '*10),
+            maxLines:3,
+            overflow: TextOverflow.ellipsis,
+            textAlign:TextAlign.right,
+            style: const TextStyle( 
+                color:Colors.pink, 
+                fontSize:20, 
+                wordSpacing:20, 
+                letterSpacing:13,
+                decoration:TextDecoration.underline,              
+            )//style
+          ),//Text
+        ),//Center
+      ),//Scaffold
+    );//MaterialApp
+  }
+}//MyApp
+
