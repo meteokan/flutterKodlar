@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final String adi='Mehmet';
+  final int yas=15;
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+       home: Scaffold(
+        body: Center(
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children:[ 
+            Text(
+          ('Adınız: $adi \n Yaşınız: $yas ${adi.length}'),
+            maxLines:3,
+            overflow: TextOverflow.ellipsis,
+            textAlign:TextAlign.center,
+              style:sitilim.yenisitilim,
+           ),//Text
+           Text(
+         ( 'Bilgilerinizi Kontrol ediniz'),
+            maxLines:3,
+            overflow: TextOverflow.ellipsis,
+            textAlign:TextAlign.center,
+             style:sitilim.yenisitilim,
+
+           ),//Text
+            ],
+           )),//Center column
+      ),//Scaffold
+    );//MaterialApp
+  }
+}//MyApp
+
+class sitilim{
+  static TextStyle yenisitilim= const TextStyle( 
+                color:Colors.blueGrey, 
+                fontSize:12, 
+                wordSpacing:20, 
+                letterSpacing:7,
+                decoration:TextDecoration.underline, 
+            
+            );//style
+  
+  
+}
+
+
