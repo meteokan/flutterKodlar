@@ -1,0 +1,45 @@
+Not : https://m3.material.io/develop/flutter sitesinden font, icon vs. vs. destek alınabilir.
+import 'package:flutter/material.dart';
+
+const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final String adi='Mehmet';
+  final int yas=15;
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+       home: Scaffold(
+        body: Center(
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children:[ 
+            Text(
+          ('Adınız: $adi \n Yaşınız: $yas ${adi.length}'),
+            maxLines:3,
+            overflow: TextOverflow.ellipsis,
+            textAlign:TextAlign.center,
+               style:Theme.of(context).textTheme.subtitle1?.copyWith(color:Colors.cyan), //siteden alınmıştır
+           ),//Text
+           Text(
+         ( 'Bilgilerinizi Kontrol ediniz'),
+            maxLines:3,
+            overflow: TextOverflow.ellipsis,
+            textAlign:TextAlign.center,
+             style:Theme.of(context).textTheme.headline6,//siteden alınmıştır
+
+           ),//Text
+            ],
+           )),//Center column
+      ),//Scaffold
+    );//MaterialApp
+  }
+}//MyApp
+
+
+
+
